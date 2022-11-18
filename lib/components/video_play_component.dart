@@ -83,7 +83,6 @@ class _VideoPlayComponentState extends State<VideoPlayComponent>
       player: YoutubePlayer(
         controller: _controller,
         showVideoProgressIndicator: true,
-        progressIndicatorColor: Colors.green,
         topActions: [
           const SizedBox(width: 8.0),
           Expanded(
@@ -93,11 +92,7 @@ class _VideoPlayComponentState extends State<VideoPlayComponent>
               overflow: TextOverflow.ellipsis,
               maxLines: 1,
             ),
-          ),
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.settings, color: Colors.white, size: 25.0),
-          ),
+          )
         ],
         onReady: () {
           _isPlayerReady = true;
@@ -112,7 +107,7 @@ class _VideoPlayComponentState extends State<VideoPlayComponent>
             child: Row(
               children: <Widget>[
                 const Text(
-                  'Volume',
+                  '음량',
                   style: TextStyle(
                     fontWeight: FontWeight.w300,
                     color: Colors.white,
@@ -120,6 +115,7 @@ class _VideoPlayComponentState extends State<VideoPlayComponent>
                 ),
                 Expanded(
                   child: Slider(
+                    activeColor: Colors.green,
                     inactiveColor: Colors.transparent,
                     value: _volume,
                     min: 0.0,
