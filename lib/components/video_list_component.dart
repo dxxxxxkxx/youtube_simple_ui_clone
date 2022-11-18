@@ -20,7 +20,10 @@ class VideoListComponent extends StatelessWidget with WidgetComponent {
       child: Row(
         children: [
           /* 1 */
-          Expanded(flex: 16, child: setVideo16To9(videoSrc: video.videoSrc)),
+          Expanded(
+            flex: 16,
+            child: setThumbnail16To9(thumbnailSrc: video.thumbnailSrc),
+          ),
           /* 2 */
           const Spacer(),
           /* 3 */

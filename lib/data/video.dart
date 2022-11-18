@@ -3,6 +3,7 @@ class Video {
   String? uploaderLogoSrc;
   String videoTitle;
   String videoInfo;
+  String? thumbnailSrc;
   String videoSrc;
 
   Video({
@@ -11,5 +12,6 @@ class Video {
     required this.videoInfo,
     required this.videoSrc,
     this.uploaderLogoSrc,
+    this.thumbnailSrc,
   });
 }

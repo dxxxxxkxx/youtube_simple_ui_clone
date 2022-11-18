@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 mixin WidgetComponent {
   final double aspectRatio16To9 = 16 / 9;
 
-  Widget setVideo16To9({required String videoSrc}) {
+  Widget setThumbnail16To9({String? thumbnailSrc}) {
     return AspectRatio(
       aspectRatio: aspectRatio16To9,
-      child: Image.asset('assets/images/$videoSrc', fit: BoxFit.contain),
+      child: thumbnailSrc != null
+          ? Image.asset('assets/images/$thumbnailSrc', fit: BoxFit.contain)
+          : Container(color: Colors.black),
     );
   }
 
