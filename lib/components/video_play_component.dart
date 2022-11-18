@@ -27,9 +27,7 @@ class _VideoPlayComponentState extends State<VideoPlayComponent>
   bool _isMuted = false;
   bool _isPlayerReady = false;
 
-  final List<String?> _ids = [
-    // YoutubePlayer.convertUrlToId(widget.videoSrc)
-  ];
+  final List<String?> _ids = [];
 
   @override
   void initState() {
@@ -108,11 +106,6 @@ class _VideoPlayComponentState extends State<VideoPlayComponent>
         onReady: () {
           _isPlayerReady = true;
         },
-        // onEnded: (data) {
-        //   _controller
-        //       .load(_ids[(_ids.indexOf(data.videoId) + 1) % _ids.length]);
-        //   _showSnackBar('Next Video Started!');
-        // },
       ),
       builder: (context, player) => ListView(
         shrinkWrap: true,
@@ -191,24 +184,7 @@ class _VideoPlayComponentState extends State<VideoPlayComponent>
                       ),
                     )
                   ],
-                ),
-                // _space,
-                // AnimatedContainer(
-                //   duration: const Duration(milliseconds: 800),
-                //   decoration: BoxDecoration(
-                //     borderRadius: BorderRadius.circular(20.0),
-                //     color: _getStateColor(_playerState),
-                //   ),
-                //   padding: const EdgeInsets.all(8.0),
-                //   child: Text(
-                //     _playerState.toString(),
-                //     style: const TextStyle(
-                //       fontWeight: FontWeight.w300,
-                //       color: Colors.white,
-                //     ),
-                //     textAlign: TextAlign.center,
-                //   ),
-                // )
+                )
               ],
             ),
           )
